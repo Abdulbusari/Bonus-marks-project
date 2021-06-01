@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+
+    font-family: "Baskerville", Garamond, serif;
+}
+
+/* varibales for colour */
+$nav-background-color:  rgb(52, 173, 253);
+$body-background-color: linear-gradient(to bottom, #fafafa, #c1f6ff, #f5faff); 
+
+/*basic styling for body of codes */
+body {
+    background-image: $body-background-color;
+    font-size: 10px;
+    margin: 0%;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin: 10% 20%;
+}
+/*styling for the nav bar */
+nav {
+
+
+        background: $nav-background-color;
+        list-style: none;
+        font-weight: bold;
+        margin-bottom: 10px;
+        width: 100%;
+        text-decoration: none;
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px;
+        padding-top: 5px;
+    ul 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+    /*lets you hover over stuff */
+    li:hover {
+        transform: translateY(-5px) scale(1.1);
+    } 
+
+    a
+    {
+        padding: 20px;
+        margin: 0px 5px 5px;
+        color: rgb(243, 237, 237);
+        /* take away unline on link*/
+        text-decoration: none;
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 215px;
+        border: 3px solid #C4DFE6;
+        text-align: center;
+    }
+
+    a:visited {
+        color:#044186;
+        /* take away unline on link*/
+        text-decoration: none;
+    }
+
+    .fixed 
+    {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgb(134, 221, 255);
+        padding: 0px;
+        margin: 0 auto;
+        font-size: 20px;
+    }
+
+    a:hover, nav a:focus 
+    {
+        color: rgb(0, 0, 0);
+        /*unline when hovered over*/ 
+        text-decoration: underline;
+    }
+
+    /* styling for when you hover over nav */
+    li 
+    {
+        padding: 5px;
+        margin: 4px;
+        display: inline;
+        font-size: 40px;
+        text-decoration: none;
+        transform: transform 0.5;
+        transition: transform 0.5s ease;
+    }
+
+}
+
+/*lets picture fade in when you hover over it */
+#image-box {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    width: 540px;
+
+    img {
+        max-width: 100%;
+        transition: all 0.3s;
+        display: block;
+        width: 100%;
+        height: auto;
+        transform: scale(1);
+    }
+
+    :hover img {
+        transform: scale(1.1);
+    }
+
+}
+
+/* 
+  The main tag, which holds all of our main content, will 
+  fade in when a user travels to the web page. from Mr.hardman github
+  */
+main {
+    opacity: 0;
+    animation: fadeIn 1s 1.2s forwards;
+}
+#photo {
+    width: 22vw;
+    height: 20vw;
+    min-width: 130px;
+    min-height: 100px;
+    float: left;
+    margin: 0 20px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+    margin-top: 2%;
+}
+
+/* makes a text box with these properties */
+.myDiv {
+    border: 5px outset rgb(139, 139, 139);
+    background-color: rgb(255, 255, 255);    
+    text-align: center;
+}
+
+nav
+{
+    display: inline-block;
+    color: #050000;
+    /* take away unline on link*/
+    text-decoration: none;
+    padding: 5px;
+    text-align: center;
+    margin: 0 auto;
+    list-style: none;
+}
+
+
+
+
+
+
+/* 
+This is the keyframes definition for the fadeIn animation
+used by the main tag, which will cause all main content to
+start as completely transparent and go to fully opaque. It
+will stay fully opaque after the animation completes.
+    */
+@keyframes   fadeIn 
+{
+    from {
+    opacity: 0;
+    }
+
+    to {
+    opacity: 1;
+    }
+}
+/**
+* CSS starting here adapted from https://www.sitepoint.com/css-transforms-real-world/
+*/
+#photo-gallery {
+    margin: 10px auto;
+}
+
+
+#photo:hover {
+    transform: rotateY(180deg);
+}
+
+#photo img {
+    object-fit: cover;
+}
+
+
+.side {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+    text-align: center;
+    background-color: #e0e0e0;
+}
+/**
+* CSS adapted from https://www.sitepoint.com/css-transforms-real-world/ ends here
+*/
+             
+#fade
+{
+    opacity:0.1;
+    
+}
+#fade:hover
+{
+    opacity:1;
+
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  /* makes the div change colour*/
+  #div2 
+ {
+    border: 5px outset;
+      background-color: rgb(255, 255, 255);
+       animation-name: Animation;
+      position: relative;
+      animation-duration: 10s;
+  }
+/* picks colours it fades between*/
+  @keyframes  Animation 
+  {
+      from {background-color: rgb(68, 208, 255);}
+      to {background-color: rgb(211, 132, 28);}
+  }             

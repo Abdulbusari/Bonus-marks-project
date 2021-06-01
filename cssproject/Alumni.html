@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Photo Gallery</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
+        <link rel="stylesheet" type="text/css" href="Style-sheets.css">
+        <style>
+            h1 {
+                font-family: "Baskerville", Garamond, serif;
+                text-align: center;
+                font-size: 64px;
+            }
+
+            #gallery {
+                /* This property creates the CSS Grid container */
+                display: -ms-grid;
+                display: grid;
+
+                width: 100%;
+                height: 100%;
+
+                -ms-grid-row: repeat(auto-fit, 1fr);
+                grid-row: repeat(auto-fit, 1fr);
+                grid-template-rows: repeat(auto-fit, 1fr);
+
+                -ms-grid-column: repeat(auto-fit, 1fr);
+                grid-column: repeat(auto-fit, 1fr);
+                grid-template-columns: repeat(auto-fit, 1fr);
+                
+                /* the format of how the pictures are displayed*/
+
+                grid-template-areas: 
+                    
+                    'pic3 pic3 pic1 pic1 pic1 pic1'
+                    'pic2 pic2 pic2 pic4 pic4 pic4'
+                    'pic2 pic2 pic2 pic5 pic5 pic5';
+
+                /* This adds 10 px of space between our elements in our grid */
+                -ms-grid-gap: 10px;
+                grid-gap: 10px;
+                gap: 10px;
+            }
+
+            #gallery a, #gallery img {
+                width: 100%;
+                height: 100%;
+            }
+
+            #pic1 {
+                grid-area: pic1;
+            }
+
+            #pic2 {
+                grid-area: pic2;
+            }
+
+            #pic3 {
+                grid-area: pic3;
+            }
+            #pic4 {
+                grid-area: pic4;
+            }
+            #pic5 {
+                grid-area: pic5;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="fixed">
+            <ul>
+                <li>
+                    <a class="navLinks" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="navLinks" href="art.html"> Faculty of Art</a>
+                </li>
+                <li>
+                    <a class="navLinks" href="science.html"> Faculty of Science</a>
+                </li>
+                <li>
+                    <a class="navLinks" href="Alumni.html"> Alumni</a>
+                </li>
+            </ul>
+        </nav>
+        </nav>
+
+        <h1>Alumni event</h1>
+
+        <div class="myDiv">
+            <p>
+                Alumni reunions are a wonderful way to reconnect with your former
+                classmates to share experiences and create new memories. Reunions are an excellent
+                way to re-connect with old classmates and reconnect with your alma mater.
+                While in-person reunions have been suspended until further notice,
+                we would be delighted to assist you in planning your virtual reunion 
+                from the comfort of your own home!
+            </p>
+            
+        </div>
+        <h1>Pictures From Last Reunion</h1>
+        <div id="gallery">
+            <a id="pic1" href="images/um-reunion-1.jpg">
+                <img src="images/um-reunion-1.jpg"/>
+            </a>
+            <a id="pic2" href="images/um-reunion-3.jpg">
+                <img src="images/um-reunion-3.jpg"/>
+            </a>
+            <a id="pic3"href="images/um-reunion-5.jpg">
+                <img src="images/um-reunion-5.jpg"/>
+            </a>
+            <a id="pic4" href="images/reunions-slide-show-copy.jpg">
+                <img src="images/reunions-slide-show-copy.jpg"/>
+            </a>
+            <a id="pic5" href="images/nursing-75-2-1_0.jpeg">
+                <img src="images/nursing-75-2-1_0.jpeg"/>
+            </a>
+            
+            
+        </div>
+    </body>
+</html>
